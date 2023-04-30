@@ -1,0 +1,54 @@
+.editor-container {
+  width: 50%;
+}
+
+.wrapper {
+  width: 98%;
+}
+
+.wrapper__editor {
+  box-shadow: inset 0px 1px 8px -3px #ABABAB;
+  background: #fefefe;
+}
+
+.public-DraftStyleDefault-block {
+  margin: 0 !important;
+}
+
+.public-DraftEditor-content {
+  min-height: 7em !important;
+}
+
+.article {
+  width: 50%;
+  background: #ddd;
+}
+
+.wrapper__editor, .article {
+  padding: 1em;
+  min-height: 12em;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  cursor: text;
+  border-radius: 2px;
+}
+
+.btn-container {
+  display: inline-block;
+  margin-top: 0.5em;
+}
+
+.btn-container__btn {
+  width: 6em;
+  height: 2em;
+  border: none;
+  color: ghostwhite;
+  background-color: dodgerblue;
+  font-weight: 500;
+  font-size: 1.01em;
+  outline: none;
+}
+
+.btn-container__btn-red {
+  background-color: red;
+}
