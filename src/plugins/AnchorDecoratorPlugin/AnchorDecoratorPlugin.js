@@ -11,13 +11,11 @@ const anchorTagStrategy = (contentBlock, callback, contentState) => {
   }
 }
 
-//* INFO: This is not functional at least yet ;)
-
 //* INFO: This is one of the solutions to preserve hyperlinks.
-//* The plugin checks all blocks for the presence of an "valid" anchor tag,
-//* and once the user is done editing the block containing the link it renders
-//* it as a link. The HTML markup is still preserved and the user can edit it
-//* again in the edit mode.
+/* The plugin checks all blocks for the presence of an "valid" anchor tag,
+and once the user is done editing the block containing the link it renders
+it as a link. The HTML markup is still preserved and the user can edit it
+ again in the edit mode. */
 const createADPlugin = () => {
   return {
     decorators: [

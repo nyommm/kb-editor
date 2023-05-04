@@ -12,11 +12,11 @@ function linkStrategy(contentBlock, callback, contentState) {
 }
 
 //* INFO: This is one of the plugins to preserve hyperlinks.
-//* When a user selects a range of text that represents a valid HTML
-//* anchor tag and presses CTRL + ALT + L, the anchor tag is permanently
-//* converted to a LINK entity and is appropriately decorated.
-//* The input required for the conversion can also be easily extented to a button press
-//* on existing toolbars available for the editor.
+/** When a user selects a range of text that represents a valid HTML
+ * anchor tag and presses CTRL + ALT + L, the anchor tag is permanently
+ * converted to a LINK entity and is appropriately decorated.
+ * The input required for the conversion can also be easily extented to a button press
+ * on existing toolbars available for the editor. */
 const createACPlugin = () => {
   return {
     keyBindingFn: (evt) => {
@@ -36,10 +36,10 @@ const createACPlugin = () => {
         //* INFO: This only works when the selection is limited to one block
         const selectedText = currentBlock.getText().slice(selectionStart, selectionEnd);
         //* INFO: The method bellow expects selectedText to just contain the anchor tag.
-        //* It should be possible to convert one or more anchor tags within the selected range,
-        //* but it would be a complex operation as we'll need keep track of selection range
-        //* as it will change as we replace anchor tags with their corresponding text.
-        //* For now we only update if the selection is just one valid anchor tag.
+        /** It should be possible to convert one or more anchor tags within the selected range,
+         * but it would be a complex operation as we'll need keep track of selection range
+         * as it will change as we replace anchor tags with their corresponding text.
+         * For now we only update if the selection is just one valid anchor tag. */
         const { url, text } = extractLinkAndText(selectedText);
         if (!url || !text) return true;
         const contentStateWithEntity = contentState.createEntity('LINK', 'MUTABLE', { url });
